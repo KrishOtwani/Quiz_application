@@ -1,0 +1,598 @@
+import 'dart:io';
+import 'dart:math';
+import 'dart:async';
+
+void main() {
+  int count = 0; //for counting the number of correct answers as the quiz progresses
+
+  print("Welcome to the quiz:");
+  print("Rules for the quiz are as follows:");
+  print("Every correct answer gives you 5 points. There is no negative marking.");
+
+  print("Select the topic for Quiz:");
+  print("1. Physics:");
+  print("2. Chemistry:");
+  print("3. Mathematics:");
+  int? x = int.parse(stdin.readLineSync()!);
+  
+ 
+switch(x){
+  
+//Physics questions
+
+case 1:{
+     
+    print("Welcome to the Physics section.\n");
+    Subject1 physics_quiz = new Subject1();
+    
+    //q1
+    
+    physics_quiz.p1();
+    print("Enter your option.");
+    int? phy_ans_1 = int.parse(stdin.readLineSync()!);
+    if(phy_ans_1 == 2)
+    {
+        print("Adhbhut!!\n");
+        count++;
+    }
+    else
+    {
+        print("Better luck next time.The correct option was 2.\n");
+    }
+    
+    //q2
+    
+    physics_quiz.p2();
+    print("Enter your option.");
+    int? phy_ans_2 = int.parse(stdin.readLineSync()!);
+    if(phy_ans_2 == 1)
+    {
+        print("Adhbhut!!\n");
+        count++;
+    }
+    else
+    {
+        print("Better luck next time.The correct option was 1.\n");
+    }
+    
+    //q3
+    
+    physics_quiz.p3();
+    print("Enter your option.");
+    int? phy_ans_3 = int.parse(stdin.readLineSync()!);
+    if(phy_ans_3 == 2)
+    {
+        print("Adhbhut!!\n");
+        count++;
+    }
+    else
+    {
+        print("Better luck next time.The correct option was 2.\n");
+    }
+    
+    //q4
+    
+    physics_quiz.p4();
+    print("Enter your option.");
+    int? phy_ans_4 = int.parse(stdin.readLineSync()!);
+    if(phy_ans_4 == 3)
+    {
+        print("Adhbhut!!\n");
+        count++;
+    }
+    else
+    {
+        print("Better luck next time.The correct option was 3.\n");
+    }
+    
+    var incorrect = 4 - count;
+    var score = 4 * count;
+    print("Number of correct answers = $count");
+    print("Number of incorrect answers = $incorrect");
+    print("Score = $score");
+    
+   
+    }break;
+  
+
+  
+// Chemistry questions
+
+case 2:{
+   
+  print("Welcome to the Chemistry section.\n");
+    Subject2 chemistry_quiz = new Subject2();
+    
+    //q1
+    
+    chemistry_quiz.c1();
+    print("Enter your option.");
+    int? chem_ans_1 = int.parse(stdin.readLineSync()!);
+    if(chem_ans_1 == 4)
+    {
+        print("Adhbhut!!\n");
+        count++;
+    }
+    else
+    {
+        print("Better luck next time.The correct option was 4.\n");
+    }
+    
+    //q2
+    
+    chemistry_quiz.c2();
+    print("Enter your option.");
+    int? chem_ans_2 = int.parse(stdin.readLineSync()!);
+    if(chem_ans_2 == 3)
+    {
+        print("Adhbhut!!\n");
+        count++;
+    }
+    else
+    {
+        print("Better luck next time.The correct option was 3.\n");
+    }
+    //q3
+    
+    chemistry_quiz.c3();
+    print("Enter your option.");
+    int? chem_ans_3 = int.parse(stdin.readLineSync()!);
+    if(chem_ans_3 == 1)
+    {
+        print("Adhbhut!!\n");
+        count++;
+    }
+    else
+    {
+        print("Better luck next time.The correct option was 1.\n");
+    }
+    //q4
+    
+    chemistry_quiz.c4();
+    print("Enter your option.");
+    int? chem_ans_4 = int.parse(stdin.readLineSync()!);
+    if(chem_ans_4 == 4)
+    {
+        print("Adhbhut!!\n");
+        count++;
+    }
+    else
+    {
+        print("Better luck next time.The correct option was 4.\n");
+    }
+
+    var incorrect = 4 - count;
+    var score = 4 * count;
+    print("Number of correct answers = $count");
+    print("Number of incorrect answers = $incorrect");
+    print("Score = $score");
+  }break;
+  
+  
+// Mathematics questions
+
+case 3:{
+   print("Welcome to the Mathematics section.\n");
+    Subject3 mathematics_quiz = new Subject3();
+    
+    //q1
+
+    mathematics_quiz.m1();
+    print("Enter your option.");
+    int? math_ans_1 = int.parse(stdin.readLineSync()!);
+    if(math_ans_1 == 3)
+    {
+        print("Adhbhut!!\n");
+        count++;
+    }
+    else
+    {
+        print("Better luck next time.The correct option was 3.\n");
+    }
+    //q2
+    
+    mathematics_quiz.m2();
+    print("Enter your option.");
+    int? math_ans_2 = int.parse(stdin.readLineSync()!);
+    if(math_ans_2 == 2)
+    {
+        print("Adhbhut!!\n");
+        count++;
+    }
+    else
+    {
+        print("Better luck next time.The correct option was 2.\n");
+    }
+    //q3
+
+    mathematics_quiz.m3();
+    print("Enter your option.");
+    int? math_ans_3 = int.parse(stdin.readLineSync()!);
+    if(math_ans_3 == 3)
+    {
+        print("Adhbhut!!\n");
+        count++;
+    }
+    else
+    {
+        print("Better luck next time.The correct option was 3.\n");
+    }
+    //q4
+
+    mathematics_quiz.m4();
+    print("Enter your option.");
+    int? math_ans_4 = int.parse(stdin.readLineSync()!);
+    if(math_ans_4 == 2)
+    {
+        print("Adhbhut!!\n");
+        count++;
+    }
+    else
+    {
+        print("Better luck next time.The correct option was 2.\n");
+    }
+
+    var incorrect = 4 - count;
+    var score = 4 * count;
+    print("Number of correct answers = $count");
+    print("Number of incorrect answers = $incorrect");
+    print("Score = $score");
+  
+}break;
+
+  
+}
+
+print("Do you want to continue?\nEnter your option."); 
+int? x_1 = int.parse(stdin.readLineSync()!); 
+  
+
+switch(x_1){
+  
+
+case 1:{
+     
+    print("Welcome to the Physics section.\n");
+    Subject1 physics_quiz = new Subject1();
+    
+    //q1
+    
+    physics_quiz.p1();
+    print("Enter your option.");
+    int? phy_ans_1 = int.parse(stdin.readLineSync()!);
+    if(phy_ans_1 == 2)
+    {
+        print("Adhbhut!!\n");
+        count++;
+    }
+    else
+    {
+        print("Better luck next time.The correct option was 2.\n");
+    }
+    
+    //q2
+    
+    physics_quiz.p2();
+    print("Enter your option.");
+    int? phy_ans_2 = int.parse(stdin.readLineSync()!);
+    if(phy_ans_2 == 1)
+    {
+        print("Adhbhut!!\n");
+        count++;
+    }
+    else
+    {
+        print("Better luck next time.The correct option was 1.\n");
+    }
+    
+    //q3
+    
+    physics_quiz.p3();
+    print("Enter your option.");
+    int? phy_ans_3 = int.parse(stdin.readLineSync()!);
+    if(phy_ans_3 == 2)
+    {
+        print("Adhbhut!!\n");
+        count++;
+    }
+    else
+    {
+        print("Better luck next time.The correct option was 2.\n");
+    }
+    
+    //q4
+    
+    physics_quiz.p4();
+    print("Enter your option.");
+    int? phy_ans_4 = int.parse(stdin.readLineSync()!);
+    if(phy_ans_4 == 3)
+    {
+        print("Adhbhut!!\n");
+        count++;
+    }
+    else
+    {
+        print("Better luck next time.The correct option was 3.\n");
+    }
+    
+    var incorrect = 4 - count;
+    var score = 4 * count;
+    print("Number of correct answers = $count");
+    print("Number of incorrect answers = $incorrect");
+    print("Score = $score");
+    
+   
+    }break;
+  
+
+  
+// Chemistry questions
+
+case 2:{
+   
+  print("Welcome to the Chemistry section.\n");
+    Subject2 chemistry_quiz = new Subject2();
+    
+    //q1
+    
+    chemistry_quiz.c1();
+    print("Enter your option.");
+    int? chem_ans_1 = int.parse(stdin.readLineSync()!);
+    if(chem_ans_1 == 4)
+    {
+        print("Adhbhut!!\n");
+        count++;
+    }
+    else
+    {
+        print("Better luck next time.The correct option was 4.\n");
+    }
+    
+    //q2
+    
+    chemistry_quiz.c2();
+    print("Enter your option.");
+    int? chem_ans_2 = int.parse(stdin.readLineSync()!);
+    if(chem_ans_2 == 3)
+    {
+        print("Adhbhut!!\n");
+        count++;
+    }
+    else
+    {
+        print("Better luck next time.The correct option was 3.\n");
+    }
+    //q3
+    
+    chemistry_quiz.c3();
+    print("Enter your option.");
+    int? chem_ans_3 = int.parse(stdin.readLineSync()!);
+    if(chem_ans_3 == 1)
+    {
+        print("Adhbhut!!\n");
+        count++;
+    }
+    else
+    {
+        print("Better luck next time.The correct option was 1.\n");
+    }
+    //q4
+    
+    chemistry_quiz.c4();
+    print("Enter your option.");
+    int? chem_ans_4 = int.parse(stdin.readLineSync()!);
+    if(chem_ans_4 == 4)
+    {
+        print("Adhbhut!!\n");
+        count++;
+    }
+    else
+    {
+        print("Better luck next time.The correct option was 4.\n");
+    }
+
+    var incorrect = 4 - count;
+    var score = 4 * count;
+    print("Number of correct answers = $count");
+    print("Number of incorrect answers = $incorrect");
+    print("Score = $score");
+  }break;
+  
+  
+// Mathematics questions
+
+case 3:{
+   print("Welcome to the Mathematics section.\n");
+    Subject3 mathematics_quiz = new Subject3();
+    
+    //q1
+
+    mathematics_quiz.m1();
+    print("Enter your option.");
+    int? math_ans_1 = int.parse(stdin.readLineSync()!);
+    if(math_ans_1 == 3)
+    {
+        print("Adhbhut!!\n");
+        count++;
+    }
+    else
+    {
+        print("Better luck next time.The correct option was 3.\n");
+    }
+    //q2
+    
+    mathematics_quiz.m2();
+    print("Enter your option.");
+    int? math_ans_2 = int.parse(stdin.readLineSync()!);
+    if(math_ans_2 == 2)
+    {
+        print("Adhbhut!!\n");
+        count++;
+    }
+    else
+    {
+        print("Better luck next time.The correct option was 2.\n");
+    }
+    //q3
+
+    mathematics_quiz.m3();
+    print("Enter your option.");
+    int? math_ans_3 = int.parse(stdin.readLineSync()!);
+    if(math_ans_3 == 3)
+    {
+        print("Adhbhut!!\n");
+        count++;
+    }
+    else
+    {
+        print("Better luck next time.The correct option was 3.\n");
+    }
+    //q4
+
+    mathematics_quiz.m4();
+    print("Enter your option.");
+    int? math_ans_4 = int.parse(stdin.readLineSync()!);
+    if(math_ans_4 == 2)
+    {
+        print("Adhbhut!!\n");
+        count++;
+    }
+    else
+    {
+        print("Better luck next time.The correct option was 2.\n");
+    }
+
+    var incorrect = 4 - count;
+    var score = 4 * count;
+    print("Number of correct answers = $count");
+    print("Number of incorrect answers = $incorrect");
+    print("Score = $score");
+  
+}break;
+
+  
+}
+    
+   
+  
+  
+  
+   
+    
+
+
+
+  
+
+}
+
+//Abstract classes
+  abstract class P 
+  {
+      void p1();
+      void p2();
+      void p3();
+      void p4();
+  }
+
+  class Subject1 extends P
+  {
+      
+      @override
+      void p1()
+      {
+          print("Which one of the following converts lights energy into electrical energy.\n1.Electric Bulb\n2.Photocell\n3.Electric Cell\n4.Electric fan\n");
+      }
+      
+      @override
+      void p2()
+      {
+          print("By dividing the displacement of a moving body with time, we obtain.\n1.Velocity\n2.Acceleration\n3.Speed\n4.Density");
+      }
+      
+      @override
+      void p3()
+      {
+          print("Earths gravitational force of attraction vanishes at:\n1.6400 km\n2.Infinity\n3.42300 km\n4.52002 km\n");
+      }
+      
+      @override
+      void p4()
+      {
+          print("A measuring cylinder is used to measure.\n1.mass\n2.area\n3.Volume\n4.Velocity\n");
+      }
+  }
+
+
+
+  abstract class C
+  {
+      void c1();
+      void c2();
+      void c3();
+      void c4();
+  }
+  
+  class Subject2 extends C
+  {
+      @override
+      void c1()
+      {
+          print("The chemical formula of lime water is:\n1.CaO\n2.CaCO3\n3.Ca(HCO3)2\n4.Ca(OH)2\n");
+      }
+      
+      @override
+      void c2()
+      {
+          print("Which of the following is an ore of iron:\n1.Siderite\n2.Malachite\n3.Bauxite\n4.Anglesite\n");
+      }
+      
+      @override
+      void c3()
+      {
+          print("Which of the following has maximum atomic radius:\n1.P\n2.Cl\n3.Na\n4.S\n");
+      }
+      
+      @override
+      void c4()
+      {
+          print("What is molecular weight of heavy water:\n1.16\n2.18\n3.22\n4.20");
+      }
+  }
+
+
+
+abstract class M
+  {
+      void m1();
+      void m2();
+      void m3();
+      void m4();
+  }
+  
+  class Subject3 extends M
+  {
+      @override
+      void m1()
+      {
+          print("The probability of event equal to zero is called;\n1.Unsure event\n2.Sure Event\n3.Impossible event\n4.Independent event\n");
+      }
+      
+      @override
+      void m2()
+      {
+          print(" In ∆ ABC, right-angled at B, AB = 24 cm, BC = 7 cm. The value of tan C is:\n1.12/7\n2.24/7\n3.20/7\n4.7/24\n");
+      }
+      
+      @override
+      void m3()
+      {
+          print("(Sin 30°+cos 60°)-(sin 60° + cos 30°) is equal to:\n1.0\n2.1+2√3\n3.1-√3\n4.1+√3\n");
+      }
+      
+      @override
+      void m4()
+      {
+          print("The probability that cannot exist among the following:\n1.0.2\n2.-1.5\n3.15%\n4.0.7\n");
+      }
+  }
